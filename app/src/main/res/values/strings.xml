@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Submitter</string>
+
+    <string-array name="sexe">
+        <item>-- Sélectionnez --</item>
+        <item>Homme</item>
+        <item>Femme</item>
+        <item>Autre</item>
+    </string-array>
+
+
+</resources>
+
