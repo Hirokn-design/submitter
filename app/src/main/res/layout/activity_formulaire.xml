@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"  xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormulaireActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/img"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bord_arrondi"
+            android:padding="16dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Mon Formulaire"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:text="Veuillez entrer les informations demandées"
+            android:textStyle="bold"
+
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="60dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            >
+
+            <ImageView
+                android:id="@+id/image_profil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/bord_arrondi"
+                android:gravity="center_vertical"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="23dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        android:text="Nom :" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:hint="Entrez votre nom"
+                        /> </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="23dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        android:text="Prénom :" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:hint="Entrez votre prénom"
+                        /> </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="39dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sexe :"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_sexe"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="3"
+                        android:entries="@array/sexe" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Date de naissance:"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_date_naissance"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="JJ/MM/AAAA"
+                        android:inputType="date"
+                        android:maxLength="10">
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Téléphone :"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:hint="Entrez votre numéro"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/email"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:inputType="textWebEmailAddress"
+                        android:hint="exemple@gmail.com"
+                        /> </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height = "wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width = "wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Annuler"
+                android:onClick="annuler"
+                android:layout_gravity="start"
+                android:layout_margin="16dp"
+                android:backgroundTint="#fdf5d5"
+                />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_gravity="end"
+                android:layout_margin="16dp"
+                android:backgroundTint="#8b86"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
